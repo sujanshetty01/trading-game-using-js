@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Trading Simulator</h1>
+            <div class="account-info">
+                <p>Balance: $<span id="balance">10000.00</span></p>
+            </div>
+        </header>
+        
+        <main>
+            <section class="market-section">
+                <h2>Market</h2>
+                <div class="stock-list" id="stockList">
+                    <!-- Stock items will be generated here -->
+                </div>
+            </section>
+            
+            <section class="portfolio-section">
+                <h2>Your Portfolio</h2>
+                <div class="portfolio-list" id="portfolioList">
+                    <!-- Portfolio items will be generated here -->
+                </div>
+            </section>
+            
+            <section class="trade-section">
+                <h2>Trade</h2>
+                <div class="trade-form">
+                    <div class="form-group">
+                        <label for="stockSymbol">Stock Symbol:</label>
+                        <select id="stockSymbol">
+                            <option value="">Select a stock</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tradeAction">Action:</label>
+                        <select id="tradeAction">
+                            <option value="buy">Buy</option>
+                            <option value="sell">Sell</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" min="1" value="1">
+                    </div>
+                    <button id="executeTrade">Execute Trade</button>
+                </div>
+                <div id="tradeMessage" class="trade-message"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

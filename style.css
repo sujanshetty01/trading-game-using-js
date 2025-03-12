@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #2e7d32;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.market-section, .portfolio-section, .trade-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for dark mode */
+}
+
+.trade-section {
+  grid-column: span 2;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #1976d2;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+.stock-item, .portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for dark mode */
+
+}
+
+.stock-name, .portfolio-name {
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+.stock-price, .portfolio-value {
+  color: #2e7d32;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+.stock-change-positive {
+  color: #2e7d32;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+.stock-change-negative {
+  color: #c62828;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for dark mode */
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+.trade-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.trade-message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.trade-message.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .trade-section {
+    grid-column: span 1;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1faee;
+}
+
+body.dark-mode .market-section, 
+body.dark-mode .portfolio-section, 
+body.dark-mode .trade-section {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #4cc9f0;
+}
+
+body.dark-mode .stock-item, 
+body.dark-mode .portfolio-item {
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+body.dark-mode .stock-price, 
+body.dark-mode .portfolio-value {
+  color: #4cc9f0;
+}
+
+body.dark-mode select, 
+body.dark-mode input {
+  background-color: #3d3d3d;
+  color: #f1faee;
+  border-color: #5d5d5d;
+}
+
+body.dark-mode .portfolio-empty {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode label {
+  color: #f1faee;
+}
+
+body.dark-mode .stock-name, 
+body.dark-mode .portfolio-name {
+  color: #f1faee;
+}
+
+body.dark-mode .portfolio-quantity {
+  color: #cccccc;
+}
